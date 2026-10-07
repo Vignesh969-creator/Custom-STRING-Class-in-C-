@@ -308,6 +308,7 @@ S.str=new char[strlen(p)+c+1];
 my_strcpy(S.str,p);
 //strncat(S.str,D.str,c);
 my_strncat(S.str,D.str,c);
+delete p;
 }
 
 int strncmp(STRING&S1,STRING&S2,int c){
