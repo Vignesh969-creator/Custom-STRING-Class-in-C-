@@ -28,7 +28,7 @@ char*str;
 		my_strcpy(str,a.str);
 		}
 		
-	STRING  operator=(STRING& a){
+	STRING&  operator=(STRING& a){
 				
 		char*p=a.str;
 		if(str!=0){
