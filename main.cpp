@@ -473,7 +473,17 @@ return len;
 }
 
 istream& operator >>(istream &i,const STRING &a){
-cin>>a.str;
+char*p=new char[3000];
+i>>p;
+int len=0;
+if(a.str!=nullptr){
+	delete [] a.str;
+	a.str=0;
+}
+a.str=new char[strlen(p)+1];
+strcpy(a.str,p);
+delete [] p;
+return i;
 }
 ostream& operator<<(ostream &o,const STRING &a){
 cout<<a.str;
