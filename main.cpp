@@ -17,7 +17,7 @@ char*str;
 		str=new char[len+1];
 		my_strcpy(str,p);	
 		}
-		STRING(STRING &a){
+		STRING(const STRING &a){
 		int len=0;
 		char*s=a.str;
 		while(*s){
@@ -28,7 +28,7 @@ char*str;
 		my_strcpy(str,a.str);
 		}
 		
-	STRING&  operator=(STRING& a){
+	STRING  operator=(STRING& a){
 				
 		char*p=a.str;
 		if(str!=0){
