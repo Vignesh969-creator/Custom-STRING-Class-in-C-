@@ -68,7 +68,7 @@ char*str;
 		cout<<str<<endl;
 	}
 	
-	STRING& operator +(STRING &a){
+	STRING operator +(STRING &a){
 		int len1=0,len2=0;
 		char*p=a.str;
 		while(*p){
